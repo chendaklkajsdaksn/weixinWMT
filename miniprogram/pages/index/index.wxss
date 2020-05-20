@@ -28,3 +28,13 @@
 .small{
   font-size: .8rem;
 }
+.tab .van-ellipsis{
+  font-size: .7rem;
+  overflow: visible;
+}
+.tab .van-tab--active .van-ellipsis{
+  color: #f00;
+}
+.tab .van-tabs__wrap--scrollable .van-tab{
+  flex: 0 0 25% !important;
+}

@@ -15,8 +15,17 @@
       </view>
     </view>
   <view>
-  <view>
-    
+  <view class="tab">
+    <van-tabs active="{{ active }}" ellipsis="false" swipeable>
+      <van-tab title="春夏秋冬系列" name="cxqd" class="lag">春夏秋冬系列</van-tab>
+      <van-tab title="真龙天子系列" name="zltz" class="lag">真龙天子系列</van-tab>
+      <van-tab title="勇士荣耀系列" name="ysry" class="lag">内容 3</van-tab>
+      <van-tab title="茅乡系列" name="mx">内容 4</van-tab>
+      <van-tab title="汾酒系列" name="fj">内容 5</van-tab>
+      <van-tab title="德盛福系列" name="dsf">内容 6</van-tab>
+      <van-tab title="红酒系列" name="hj">内容 7</van-tab>
+      <van-tab title="财富系列" name="cf">内容 8</van-tab>
+    </van-tabs>
   </view>
   </view>
 </view>

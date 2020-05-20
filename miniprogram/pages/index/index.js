@@ -3,37 +3,111 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './user-unlogin.png',
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    cxqd:[],
+    mx:[],
+    zltz:[],
+    ysry:[],
+    pj:[],
+    dsf:[],
+    hj:[],
+    cf:[],
+    active:'cxqd'
   },
 
   onLoad: function() {
-    if (!wx.cloud) {
-      wx.redirectTo({
-        url: '../chooseLib/chooseLib',
-      })
-      return
-    }
-
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-            }
-          })
-        }
-      }
-    })
+    var that=this;
+    wx.request({
+      url: 'http://127.0.0.1:4000/mx',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          mx:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
+    wx.request({
+      url: 'http://127.0.0.1:4000/cxqd',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          cxqd:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
+    wx.request({
+      url: 'http://127.0.0.1:4000/zltz',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          zltz:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
+    wx.request({
+      url: 'http://127.0.0.1:4000/ysry',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          ysry:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
+    wx.request({
+      url: 'http://127.0.0.1:4000/pj',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          pj:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
+    wx.request({
+      url: 'http://127.0.0.1:4000/dsf',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          dsf:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
+    wx.request({
+      url: 'http://127.0.0.1:4000/hj',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          hj:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
+    wx.request({
+      url: 'http://127.0.0.1:4000/cf',
+      header:{'Content-Type':'application/x-www-form-urlencoded'},
+      method:'GET',
+      success(res){
+        that.setData({
+          cf:res.data.results
+        })
+      },
+      fail(res){console.log(res)}
+    });
   },
 
   onGetUserInfo: function(e) {
