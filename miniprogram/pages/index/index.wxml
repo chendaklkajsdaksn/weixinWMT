@@ -17,8 +17,27 @@
   <view>
   <view class="tab">
     <van-tabs active="{{ active }}" ellipsis="false" swipeable>
-      <van-tab title="春夏秋冬系列" name="cxqd" class="lag">春夏秋冬系列</van-tab>
-      <van-tab title="真龙天子系列" name="zltz" class="lag">真龙天子系列</van-tab>
+      <van-tab title="春夏秋冬系列" name="cxqd" class="lag">
+        <view class="tab-item">
+          <view wx:for="{{cxqd}}" wx:key="item">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="真龙天子系列" name="zltz" class="lag">
+
+      </van-tab>
       <van-tab title="勇士荣耀系列" name="ysry" class="lag">内容 3</van-tab>
       <van-tab title="茅乡系列" name="mx">内容 4</van-tab>
       <van-tab title="汾酒系列" name="fj">内容 5</van-tab>

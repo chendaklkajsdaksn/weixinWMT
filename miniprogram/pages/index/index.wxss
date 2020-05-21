@@ -38,3 +38,47 @@
 .tab .van-tabs__wrap--scrollable .van-tab{
   flex: 0 0 25% !important;
 }
+.tab-item{
+  background: #eee;
+  padding: 20rpx;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  width: 750rpx;
+  gap: 20rpx;
+  font-size: .6rem;
+  box-sizing: border-box;
+}
+.tab-item>view{
+  width: 100%;
+  overflow: hidden;overflow: hidden;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.tab-item>view>view:nth-child(2){
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.tab-item image{
+  width: 100%;height: 350rpx;
+}
+.tab-item .price{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:10rpx;
+  margin-top: 5rpx;
+  font-size: .8rem;
+  align-items: center;
+  color: #f00;letter-spacing: 1px;
+}
+.tab-item .price .car{
+  color: #fff;
+  background: #f00;
+  padding: 5rpx;
+  border-radius: 50%;
+}
