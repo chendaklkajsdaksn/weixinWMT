@@ -1,2 +1,26 @@
 <!--pages/car/car.wxml-->
-<text>pages/car/car.wxml</text>
+<view wx:if="{{carNum==0}}">
+  <view class="title">
+    <image src="http://m.99mi.com/images/99m_56.png" class="img1"></image>
+    <view>亲,去选购一瓶美酒吧</view>
+  </view>
+  <view>
+    <van-cell is-link title="猜你喜欢" link-type="switchTab" url="../index/index" value="查看更多" size="large" />
+    <view class="tab-item">
+          <view wx:for="{{like}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="like">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+  </view>
+</view>

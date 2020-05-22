@@ -17,7 +17,12 @@ Page({
     cf:[],
     active:'cxqd'
   },
-
+  navigator(e){
+   var goTo= e.currentTarget.dataset;
+   wx.navigateTo({
+     url: '../details/details?type='+goTo.type+'&index='+goTo.index,
+   })
+  },
   onLoad: function() {
     var that=this;
     wx.request({
@@ -28,9 +33,12 @@ Page({
         that.setData({
           mx:res.data.results
         })
+        
+        app.data.mx=res.data.results;
       },
       fail(res){console.log(res)}
     });
+    console.log(app.data)
     wx.request({
       url: 'http://127.0.0.1:4000/cxqd',
       header:{'Content-Type':'application/x-www-form-urlencoded'},
@@ -38,7 +46,8 @@ Page({
       success(res){
         that.setData({
           cxqd:res.data.results
-        })
+        });
+        app.data.cxqd=res.data.results;
       },
       fail(res){console.log(res)}
     });
@@ -50,6 +59,7 @@ Page({
         that.setData({
           zltz:res.data.results
         })
+        app.data.zltz=res.data.results;
       },
       fail(res){console.log(res)}
     });
@@ -61,6 +71,7 @@ Page({
         that.setData({
           ysry:res.data.results
         })
+        app.data.ysry=res.data.results;
       },
       fail(res){console.log(res)}
     });
@@ -72,6 +83,7 @@ Page({
         that.setData({
           pj:res.data.results
         })
+        app.data.pj=res.data.results;
       },
       fail(res){console.log(res)}
     });
@@ -83,6 +95,7 @@ Page({
         that.setData({
           dsf:res.data.results
         })
+        app.data.dsf=res.data.results;
       },
       fail(res){console.log(res)}
     });
@@ -94,6 +107,7 @@ Page({
         that.setData({
           hj:res.data.results
         })
+        app.data.hj=res.data.results;
       },
       fail(res){console.log(res)}
     });
@@ -105,6 +119,7 @@ Page({
         that.setData({
           cf:res.data.results
         })
+        app.data.cf=res.data.results;
       },
       fail(res){console.log(res)}
     });

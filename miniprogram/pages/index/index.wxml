@@ -19,7 +19,7 @@
     <van-tabs active="{{ active }}" ellipsis="false" swipeable>
       <van-tab title="春夏秋冬系列" name="cxqd" class="lag">
         <view class="tab-item">
-          <view wx:for="{{cxqd}}" wx:key="item">
+          <view wx:for="{{cxqd}}" wx:key="item"  bindtap="navigator" data-index="{{index}}" data-type="cxqd">
             <view>
               <image src="{{item.image}}"></image>
             </view>
@@ -36,14 +36,131 @@
         </view>
       </van-tab>
       <van-tab title="真龙天子系列" name="zltz" class="lag">
-
+          <view class="tab-item">
+          <view wx:for="{{zltz}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="zltz">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
       </van-tab>
-      <van-tab title="勇士荣耀系列" name="ysry" class="lag">内容 3</van-tab>
-      <van-tab title="茅乡系列" name="mx">内容 4</van-tab>
-      <van-tab title="汾酒系列" name="fj">内容 5</van-tab>
-      <van-tab title="德盛福系列" name="dsf">内容 6</van-tab>
-      <van-tab title="红酒系列" name="hj">内容 7</van-tab>
-      <van-tab title="财富系列" name="cf">内容 8</van-tab>
+      <van-tab title="勇士荣耀系列" name="ysry" class="lag">
+        <view class="tab-item">
+          <view wx:for="{{ysry}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="ysry">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="茅乡系列" name="mx">
+        <view class="tab-item">
+          <view wx:for="{{mx}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="mx">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="汾酒系列" name="fj">
+        <view class="tab-item">
+          <view wx:for="{{pj}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="pj">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="德盛福系列" name="dsf">
+        <view class="tab-item">
+          <view wx:for="{{dsf}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="dsf">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="红酒系列" name="hj">
+        <view class="tab-item">
+          <view wx:for="{{hj}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="hj">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="财富系列" name="cf">
+        <view class="tab-item">
+          <view wx:for="{{cf}}" wx:key="item" bindtap="navigator" data-index="{{index}}" data-type="cf">
+            <view>
+              <image src="{{item.image}}"></image>
+            </view>
+            <view>
+             {{item.title}}
+            </view>
+            <view class="price">
+              <view>
+                {{item.price}}.00 / {{item.unit}}
+              </view>
+              <van-icon name="shopping-cart" class="car" />
+            </view>
+          </view>
+        </view>
+      </van-tab>
     </van-tabs>
   </view>
   </view>

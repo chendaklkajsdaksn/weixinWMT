@@ -1,2 +1,38 @@
 <!--pages/me/me.wxml-->
-<text>有更新</text>
+<view>
+  <view>
+    <view>
+    <van-icon name="qr" />
+    会员码</view>
+  </view>
+  <view>
+    <van-cell is-link title="登录手机号,同步全渠道订单" value="登录" 
+    link-type="navigateTo" url="" />
+    <view class="foot">
+     <view class="jifen">
+      <view>
+        <view>0</view>
+        <view>积分</view>
+      </view>
+      <view>
+        <view>0</view>
+        <view>卡</view>
+      </view>
+      <view>
+        <view>0</view>
+        <view>优惠券/码</view>
+      </view>
+     </view>
+      <view class="dingdan">
+        <van-cell is-link title="我的订单" value="查看全部清单" link-type="navigateTo" url="" title-class="bold" />
+        <van-grid column-num="5">
+            <van-grid-item icon="pending-payment" text="待付款" />
+            <van-grid-item icon="send-gift-o" text="待发货" />
+            <van-grid-item icon="logistics" text="待收货" />
+            <van-grid-item icon="comment-o" text="待评价" />
+            <van-grid-item icon="gold-coin-o" text="退款/售后" />
+        </van-grid>
+      </view>
+    </view>
+  </view>
+</view>

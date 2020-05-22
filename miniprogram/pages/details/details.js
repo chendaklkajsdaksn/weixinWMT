@@ -1,32 +1,29 @@
-// pages/car/car.js
+// pages/details/details.js
+const app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    carNum:0,
-    like:[]
+    image:'',
+    title:'',
+    unit:'',
+    price:0,
+    index:-1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'http://127.0.0.1:4000/like',
-      success:(res)=>{
-        res.data.results.forEach((e,i)=>{
-          if(i==0||i==1||i==3||i==4){
-            e.unit="瓶"
-          }else{
-            e.unit="箱"
-          }
-        })
-        this.setData({
-          like:res.data.results
-        })
-      }
+    var that=this,type=options.type,index=options.index;
+    that.setData({
+      image:app.data[type][index].image,
+      title:app.data[type][index].title,
+      unit:app.data[type][index].unit,
+      price:app.data[type][index].price,
+      index:index,
     })
   },
 
