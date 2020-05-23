@@ -1,1 +1,23 @@
 /* pages/details/details.wxss */
+.w-100{
+  width: 100%;
+}
+.detail .img{
+  height: 800rpx;
+}
+.detail .title{
+  padding-left: 20rpx;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.detail .price{
+  padding-left: 20rpx;
+  font-weight: bold;
+  font-size: .7rem;
+  color: #f33;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.detail .price .num{
+  font-size: 1.3rem;
+}

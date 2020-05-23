@@ -1,2 +1,21 @@
 <!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<view>
+  <view class="detail">
+    <image class="w-100 img" src="{{image}}" ></image>
+    <view class="title">
+      <text>{{title}}</text>
+    </view>
+    <view class="price">
+      <text>¥ <text class="num">{{price}}</text>.00</text>
+    </view>
+    <van-cell title="运费 免运费" value="剩余 20" />
+  </view>
+  <van-cell title="配送: 快递" is-link />
+  <view>
+    <view wx:for="{{images}}" wx:key="item">
+      <van-image
+        fit="contain"
+      src="{{item}}"/>{{item}}
+    </view>
+  </view>
+</view>

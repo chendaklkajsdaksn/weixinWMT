@@ -2,9 +2,51 @@
 .bold{
   font-weight: bold;
 }
+.huiyuan{
+  width: 3.8rem;height: 1.2rem;
+  padding:5rpx 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  font-size: .8rem;
+  margin-right: 20rpx;
+  border-radius: 1.2rem;
+  background-color: rgba(0, 0 ,0, 0.3);
+  position: absolute;
+  right: 0;
+}
+.bg-dark{
+  background-color: rgba(0, 0 ,0, 0.5) !important;
+}
+.text-dark{
+  color: #888;
+}
+.text-white{
+  color: #eee !important;
+}
+.store{
+  width: 700rpx;
+  position: absolute;
+  left: 25rpx;
+  bottom: 0;
+  background-color: rgba(0, 0 ,0, 0.5);
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  overflow: hidden;
+}
+.store .van-icon:before{
+  color: #eee;
+}
+.head{
+  background-image: linear-gradient(to right,rgb(231, 187, 129),rgb(126, 84, 30));
+  height: 300rpx;width: 750rpx;padding-top: 30rpx;
+  position: relative;
+}
 .foot{
   background-color: #eee;
   padding: 0 20rpx;
+  padding-bottom: 20rpx;
 }
 .foot::before{
   content: "";
@@ -22,6 +64,36 @@
   padding: 25rpx 0;
   font-weight: bold;
 }
+.user{
+  width:260rpx ;height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 70rpx;
+  left: 30rpx;
+}
+.user .img{
+  width: 100rpx;height: 100rpx;
+  border-radius: 50%;
+}
+.user>view>text{
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: bold;
+}
+.user>view>view{
+  background-color: rgba(0, 0 ,0, 0.7);
+  color: rgb(231, 187, 129);
+  font-size: .7rem;
+  letter-spacing: 1rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 25rpx;
+  margin-top:10rpx ;
+  width: 110rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
 .jifen>view>view:last-child{
   margin-top: 20rpx;
   font-weight: normal;
@@ -29,5 +101,28 @@
 }
 .dingdan{
   margin-top: 20rpx;
-  border-radius: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.car{
+  margin: 20rpx 0;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.car .van-cell__left-icon-wrap{
+  font-size: 1.2rem;
+  margin-right: 20rpx;
+}
+.shouhuo{
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.geren{
+  margin: 20rpx 0;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.geren .van-cell__left-icon-wrap{
+  font-size: 1.2rem;
+  margin-right: 20rpx;
 }

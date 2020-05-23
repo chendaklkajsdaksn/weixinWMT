@@ -24,6 +24,18 @@ Page({
       unit:app.data[type][index].unit,
       price:app.data[type][index].price,
       index:index,
+      images:['http://m.99mi.com/images/upload/Image/手机端关联版式新.jpg',"http://m.99mi.com/images/upload/Image/微信图片_20200331092210手机_01.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_02.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_03.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_04.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_05.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_06.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_07.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_08.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_09.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_10.jpg",
+    "http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_11.jpg"
+    ]
     })
   },
 

@@ -5,16 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    nickname:'',
+    image:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.getUserInfo({
+      complete: (res) => {console.log(res.userInfo)
+        this.setData({
+          nickname:res.userInfo.nickName,
+          image:res.userInfo.avatarUrl
+        })
+      }
+    })
   },
-
+  GetUserInfo(e){
+    console.log(e)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
