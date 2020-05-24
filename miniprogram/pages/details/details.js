@@ -10,9 +10,23 @@ Page({
     title:'',
     unit:'',
     price:0,
-    index:-1
+    index:-1,
+    show1:false,
+    show2:false
   },
+  showdown(){
+    this.setData({
+      show1:true
+    })
+  },
+  onClose1(){
+    this.setData({
+      show1:false
+    })
+  },
+  onChange(e){
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */

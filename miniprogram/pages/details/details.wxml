@@ -12,10 +12,53 @@
   </view>
   <van-cell title="配送: 快递" is-link />
   <view>
+  </view>
+  <view class="images">
     <view wx:for="{{images}}" wx:key="item">
-      <van-image
-        fit="contain"
-      src="{{item}}"/>{{item}}
+      <van-image fit="widthFix" width="750rpx" src="{{item}}" lazy-load />
     </view>
   </view>
+  <van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" />
+    <van-goods-action-icon icon="cart-o" text="购物车"  />
+    <van-goods-action-icon icon="shop-o" text="首页" />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="showdown" />
+    <van-goods-action-button text="立即购买" />
+    </van-goods-action>
+</view>
+<view>
+  <van-popup
+  show="{{ show1 }}"
+  position="bottom"
+  custom-style="height: 40%;"
+  bind:close="onClose1"
+  closeable
+  >
+    <view class="downup">
+      <view>
+        <view>
+          <van-image
+          width="7rem"
+          height="7rem"
+          fit="cover"
+          src="{{image}}"
+          />
+        </view>
+        <view>
+          <view>{{title}}</view>
+          <view class="price">￥{{price}}.00</view>
+        </view> 
+      </view>
+      <view>
+        <view>
+          购买数量
+        </view>
+        <view>
+          <van-stepper value="{{ 1}}" min="1" max="10" integer bind:change="onChange" />
+        </view>
+      </view>
+      <van-button type="danger" size="large">加入购物车</van-button>
+    </view>
+  </van-popup>
+
 </view>

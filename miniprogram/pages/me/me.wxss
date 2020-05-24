@@ -77,6 +77,12 @@
   width: 100rpx;height: 100rpx;
   border-radius: 50%;
 }
+.user>view{
+  margin-left: 10rpx;
+}
+.van-grid-item__content.van-grid-item__content--center.van-hairline--surround{
+  padding-left: 0 !important;padding-right: 0 !important;
+}
 .user>view>text{
   font-size: 1.3rem;
   color: #333;
@@ -90,8 +96,7 @@
   padding: 5rpx 10rpx;
   border-radius: 25rpx;
   margin-top:10rpx ;
-  width: 110rpx;
-  box-sizing: border-box;
+  width: 3.2rem;
   text-align: center;
 }
 .jifen>view>view:last-child{

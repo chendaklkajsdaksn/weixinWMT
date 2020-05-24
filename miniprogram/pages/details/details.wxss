@@ -21,3 +21,35 @@
 .detail .price .num{
   font-size: 1.3rem;
 }
+.images{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.downup{
+  width: 100%;height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30rpx 0 0 0;
+  box-sizing: border-box;
+}
+.downup>view{
+  display: flex;
+  padding: 0 20rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.downup>view:first-child>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.downup>view:first-child>view:nth-child(2){
+  padding: 0 20rpx;
+  padding-right: 42rpx;
+}
+.downup .price{
+  font-size: 1.5rem;
+  color: #f33;
+} 
